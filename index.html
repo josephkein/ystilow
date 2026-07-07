@@ -370,13 +370,13 @@
       <nav
         class="max-w-container-max mx-auto px-lg flex justify-between items-center"
       >
-        <div class="flex items-center gap-2">
+        <a class="flex items-center gap-2" href="index.html" aria-label="Reload homepage">
           <img
             alt="Ystilow Printing Services Logo"
             class="h-10 md:h-20 w-auto"
             src="images/print-removebg-preview.png"
           />
-        </div>
+        </a>
         <div class="hidden md:flex gap-lg items-center">
           <a
             class="font-body-md text-on-surface hover:text-primary transition-colors duration-300"
@@ -503,7 +503,7 @@
               class="absolute -bottom-12 -right-12 w-64 h-64 bg-secondary/10 rounded-full blur-3xl animate-pulse"
             ></div>
             <div
-              class="relative glass p-4 rounded-3xl overflow-hidden shadow-2xl"
+              class="relative glass p-2 rounded-3xl overflow-hidden shadow-2xl"
             >
               <img
                 alt="Corporate Merchandise Display"
@@ -527,6 +527,9 @@
             <div class="trusted-logo-track">
               <div class="trusted-logo">
                 <img alt="Company 1 logo" src="images/grab.jpg" />
+              </div>
+              <div class="trusted-logo">
+                <img alt="Company 3 logo" src="images/casio.jpg" />
               </div>
               <div class="trusted-logo">
                 <img alt="Company 3 logo" src="images/partner2.jpg" />
@@ -646,13 +649,25 @@
               </p>
               <div class="grid grid-cols-2 gap-md pt-base">
                 <div class="brand-stat-card">
-                  <h4 class="brand-stat-number text-primary">500+</h4>
+                  <h4
+                    class="brand-stat-number text-primary"
+                    data-target="500"
+                    data-suffix="+"
+                  >
+                    0+
+                  </h4>
                   <p class="brand-stat-label font-label-md">
                     Projects Completed
                   </p>
                 </div>
                 <div class="brand-stat-card">
-                  <h4 class="brand-stat-number text-secondary">200+</h4>
+                  <h4
+                    class="brand-stat-number text-secondary"
+                    data-target="200"
+                    data-suffix="+"
+                  >
+                    0+
+                  </h4>
                   <p class="brand-stat-label font-label-md">
                     Happy Clients
                   </p>
@@ -1264,11 +1279,12 @@
                   Quantity: 250-499 pcs
                 </li>
               </ul>
-              <button
-                class="w-full py-4 bg-primary text-white font-label-md rounded-xl shadow-lg hover:shadow-primary/30"
+              <a
+                class="block w-full py-4 bg-primary text-white font-label-md rounded-xl shadow-lg hover:shadow-primary/30 text-center"
+                href="#contact"
               >
                 Inquire Set
-              </button>
+              </a>
             </div>
             <div
               class="glass p-lg rounded-3xl space-y-md hover:scale-[1.02] transition-transform duration-500 border border-white/40"
@@ -1310,11 +1326,12 @@
                   Quantity: minimum 50 pcs
                 </li>
               </ul>
-              <button
-                class="w-full py-4 bg-secondary text-white font-label-md rounded-xl shadow-lg hover:shadow-secondary/30"
+              <a
+                class="block w-full py-4 bg-secondary text-white font-label-md rounded-xl shadow-lg hover:shadow-secondary/30 text-center"
+                href="#contact"
               >
                 Inquire Gifts
-              </button>
+              </a>
             </div>
             <div
               class="glass p-lg rounded-3xl space-y-md hover:scale-[1.02] transition-transform duration-500 border border-white/40"
@@ -1350,11 +1367,12 @@
                   Quantity: minimum 50 pcs
                 </li>
               </ul>
-              <button
-                class="w-full py-4 bg-tertiary text-white font-label-md rounded-xl shadow-lg hover:shadow-tertiary/30"
+              <a
+                class="block w-full py-4 bg-tertiary text-white font-label-md rounded-xl shadow-lg hover:shadow-tertiary/30 text-center"
+                href="#contact"
               >
                 Inquire Engraving
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -1585,7 +1603,7 @@
               <img
                 class="w-full"
                 data-alt="A detailed masonry gallery image showing a vibrant colorful printing project sample on an apparel. High fidelity textures, sharp edges, modern studio lighting."
-                src="images/im.jpg"
+                src="images/event.jpg"
               />
               <div
                 class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm"
@@ -1599,7 +1617,7 @@
               <img
                 class="w-full"
                 data-alt="Close-up detail of a laser-engraved bamboo notebook, showing the intricate grain and dark carbonized branding. Professional product photography vibe."
-                src="images/kits.jpg"
+                src="images/im.jpg"
               />
               <div
                 class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm"
@@ -1613,7 +1631,7 @@
               <img
                 class="w-full"
                 data-alt="A row of glossy ceramic mugs with corporate logos perfectly centered. The lighting creates a nice specular highlight on the curved surface."
-                src="images/lanyard.jpg"
+                src="images/mugs2.jpg"
               />
               <div
                 class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm"
@@ -1627,7 +1645,7 @@
               <img
                 class="w-full"
                 data-alt="A full layout of a seminar kit including a lanyard, pen, notebook, and tote bag, all featuring matching branding. High-end lifestyle shot."
-                src="images/im4.jpg"
+                src="images/kits.jpg"
               />
               <div
                 class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm"
@@ -1781,9 +1799,12 @@
                   </div>
                   <div>
                     <h4 class="font-bold">Email Address</h4>
-                    <p class="text-on-surface-variant">
+                    <a
+                      class="text-on-surface-variant hover:text-primary transition-colors"
+                      href="mailto:ystilowprinting@gmail.com"
+                    >
                       ystilowprinting@gmail.com
-                    </p>
+                    </a>
                   </div>
                 </div>
                 <div class="flex items-start gap-md">
@@ -1881,7 +1902,7 @@
             >
             <a
               class="w-10 h-10 rounded-full glass flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all"
-              href="#"
+              href="mailto:ystilowprinting@gmail.com"
               ><span class="material-symbols-outlined">mail</span></a
             >
           </div>
@@ -1980,10 +2001,13 @@
       });
 
       // Form submission prevention
-      document.querySelector("form").addEventListener("submit", (e) => {
-        e.preventDefault();
-        alert("Inquiry sent! We will contact you soon.");
-      });
+      const inquiryForm = document.querySelector("form");
+      if (inquiryForm) {
+        inquiryForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          alert("Inquiry sent! We will contact you soon.");
+        });
+      }
 
       // Mobile navigation menu
       const mobileMenuButton = document.querySelector("#mobileMenuButton");
@@ -2079,6 +2103,53 @@
       } else {
         revealElements.forEach((element) => {
           element.classList.add("is-visible");
+        });
+      }
+
+      // Animate metrics when they enter view
+      const statCounters = document.querySelectorAll("[data-target]");
+
+      const animateCounter = (element) => {
+        const target = Number(element.getAttribute("data-target") || 0);
+        const suffix = element.getAttribute("data-suffix") || "";
+        const duration = 1400;
+        const startTime = performance.now();
+
+        const step = (currentTime) => {
+          const progress = Math.min((currentTime - startTime) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          const value = Math.round(target * eased);
+          element.textContent = `${value}${suffix}`;
+
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          } else {
+            element.textContent = `${target}${suffix}`;
+          }
+        };
+
+        requestAnimationFrame(step);
+      };
+
+      if ("IntersectionObserver" in window && statCounters.length) {
+        const statObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.6 },
+        );
+
+        statCounters.forEach((counter) => statObserver.observe(counter));
+      } else {
+        statCounters.forEach((counter) => {
+          const target = Number(counter.getAttribute("data-target") || 0);
+          const suffix = counter.getAttribute("data-suffix") || "";
+          counter.textContent = `${target}${suffix}`;
         });
       }
 
