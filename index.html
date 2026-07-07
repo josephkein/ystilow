@@ -19,6 +19,12 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
     <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -1458,13 +1464,13 @@
             <h2 class="font-headline-lg text-white">Our Seamless Process</h2>
           </div>
           <div
-            class="relative flex flex-col md:flex-row justify-between items-center md:items-start gap-lg md:gap-gutter"
+            class="relative flex flex-col md:flex-row justify-between items-start gap-lg md:gap-gutter"
           >
             <div
               class="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-primary/20 via-primary to-primary/20 hidden md:block -translate-y-1/2"
             ></div>
             <div
-              class="relative z-20 flex flex-col items-center text-center space-y-md w-full md:flex-1 group"
+              class="relative z-20 flex flex-col items-center text-center space-y-md flex-1 group"
             >
               <div
                 class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xl group-hover:scale-110 transition-transform"
@@ -1481,7 +1487,7 @@
               </div>
             </div>
             <div
-              class="relative z-20 flex flex-col items-center text-center space-y-md w-full md:flex-1 group"
+              class="relative z-20 flex flex-col items-center text-center space-y-md flex-1 group"
             >
               <div
                 class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xl group-hover:scale-110 transition-transform"
@@ -1498,7 +1504,7 @@
               </div>
             </div>
             <div
-              class="relative z-20 flex flex-col items-center text-center space-y-md w-full md:flex-1 group"
+              class="relative z-20 flex flex-col items-center text-center space-y-md flex-1 group"
             >
               <div
                 class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xl group-hover:scale-110 transition-transform"
@@ -1515,7 +1521,7 @@
               </div>
             </div>
             <div
-              class="relative z-20 flex flex-col items-center text-center space-y-md w-full md:flex-1 group"
+              class="relative z-20 flex flex-col items-center text-center space-y-md flex-1 group"
             >
               <div
                 class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xl group-hover:scale-110 transition-transform"
@@ -1530,7 +1536,7 @@
               </div>
             </div>
             <div
-              class="relative z-20 flex flex-col items-center text-center space-y-md w-full md:flex-1 group"
+              class="relative z-20 flex flex-col items-center text-center space-y-md flex-1 group"
             >
               <div
                 class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xl group-hover:scale-110 transition-transform"
@@ -1784,101 +1790,11 @@
                     </a>
                   </div>
                 </div>
-                <div
-                  class="h-64 rounded-3xl overflow-hidden border border-outline-variant shadow-sm grayscale hover:grayscale-0 transition-all duration-700"
-                >
-                  <div
-                    class="w-full h-full bg-surface-container flex items-center justify-center"
-                    data-location="Manila, Philippines"
-                    style=""
-                  >
-                    <span
-                      class="material-symbols-outlined text-4xl text-outline-variant"
-                      >map</span
-                    >
-                  </div>
-                </div>
+                
               </div>
             </div>
             <div
-              class="glass p-lg rounded-[32px] border border-white/40 shadow-2xl"
-            >
-              <form class="space-y-md">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
-                  <div class="space-y-sm">
-                    <label class="font-label-md text-on-surface"
-                      >Full Name</label
-                    >
-                    <input
-                      class="w-full bg-white/70 border border-outline-variant rounded-xl p-md focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                      placeholder="John Doe"
-                      type="text"
-                    />
-                  </div>
-                  <div class="space-y-sm">
-                    <label class="font-label-md text-on-surface"
-                      >Company Name</label
-                    >
-                    <input
-                      class="w-full bg-white/70 border border-outline-variant rounded-xl p-md focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                      placeholder="Your Business"
-                      type="text"
-                    />
-                  </div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
-                  <div class="space-y-sm">
-                    <label class="font-label-md text-on-surface"
-                      >Email Address</label
-                    >
-                    <input
-                      class="w-full bg-white/70 border border-outline-variant rounded-xl p-md focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                      placeholder="john@company.com"
-                      type="email"
-                    />
-                  </div>
-                  <div class="space-y-sm">
-                    <label class="font-label-md text-on-surface"
-                      >Phone Number</label
-                    >
-                    <input
-                      class="w-full bg-white/70 border border-outline-variant rounded-xl p-md focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                      placeholder="+63 9xx xxx xxxx"
-                      type="tel"
-                    />
-                  </div>
-                </div>
-                <div class="space-y-sm">
-                  <label class="font-label-md text-on-surface"
-                    >Interested Product</label
-                  >
-                  <select
-                    class="w-full bg-white/70 border border-outline-variant rounded-xl p-md focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                  >
-                    <option>Select a service...</option>
-                    <option>Corporate Giveaways</option>
-                    <option>Customized Apparel</option>
-                    <option>Printing Services</option>
-                    <option>Bundle Packages</option>
-                  </select>
-                </div>
-                <div class="space-y-sm">
-                  <label class="font-label-md text-on-surface"
-                    >Your Message</label
-                  >
-                  <textarea
-                    class="w-full bg-white/70 border border-outline-variant rounded-xl p-md focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                    placeholder="Tell us about your requirements, quantities, and deadlines..."
-                    rows="4"
-                  ></textarea>
-                </div>
-                <button
-                  class="w-full py-4 bg-primary text-white font-headline-md text-body-md rounded-xl shadow-xl hover:shadow-primary/40 transition-all transform hover:scale-[1.01]"
-                  type="submit"
-                >
-                  Send Inquiry
-                </button>
-              </form>
+              class="glass p-lg rounded-[32px] border border-white/40 shadow-2xl" id="map">
             </div>
           </div>
         </div>
@@ -2024,6 +1940,15 @@
       </div>
     </footer>
     <script>
+        var map = L.map('map').setView([14.538704025067123, 121.08102391343799], 13);
+        
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+        
+        var marker = L.marker([14.53885867165642, 121.08048898654494]).addTo(map);
+
       // Simple scroll behavior for header
       window.addEventListener("scroll", () => {
         const header = document.querySelector("header");
