@@ -199,7 +199,7 @@
       .trusted-logo-track {
         display: flex;
         width: max-content;
-        animation: trusted-logo-slide 28s linear infinite;
+        animation: trusted-logo-slide 80s linear infinite;
       }
       .trusted-logo-marquee:hover .trusted-logo-track {
         animation-play-state: paused;
@@ -581,6 +581,93 @@
               <div class="trusted-logo">
                 <img alt="Company 4 logo" src="images/partner11.jpg" />
               </div>
+              <div class="trusted-logo">
+                <img alt="Company 4 logo" src="images/lg1.png" />
+              </div>
+              <div class="trusted-logo">
+                <img alt="Company 4 logo" src="images/lg2.png" />
+              </div>
+              <div class="trusted-logo">
+                <img alt="Company 4 logo" src="images/lg3.png" />
+              </div>
+              <div class="trusted-logo">
+                <img alt="Company 4 logo" src="images/lg4.png" />
+              </div>
+              <div class="trusted-logo">
+                <img alt="Company 4 logo" src="images/lg5.png" />
+              </div>
+              <div class="trusted-logo">
+                <img alt="Company 4 logo" src="images/lg6.png" />
+              </div>
+              <div class="trusted-logo">
+                <img alt="Company 4 logo" src="images/lg7.png" />
+              </div>
+              <div class="trusted-logo">
+                <img alt="Company 4 logo" src="images/lg8.png" />
+              </div>
+              <div class="trusted-logo">
+                <img alt="Company 4 logo" src="images/lg9.png" />
+              </div>
+              <div class="trusted-logo">
+                <img alt="Company 4 logo" src="images/lg10.png" />
+              </div>
+              <div class="trusted-logo">
+                <img alt="Company 4 logo" src="images/lg11.png" />
+              </div>
+              <div class="trusted-logo">
+                <img alt="Company 4 logo" src="images/lg12.png" />
+              </div>
+              <div class="trusted-logo">
+                <img alt="Company 4 logo" src="images/lg13.png" />
+              </div>
+              <div class="trusted-logo">
+                <img alt="Company 4 logo" src="images/lg14.png" />
+              </div>
+              <div class="trusted-logo">
+                <img alt="Company 4 logo" src="images/lg15.png" />
+              </div>
+              <div class="trusted-logo">
+                <img alt="Company 4 logo" src="images/lg16.png" />
+              </div>
+              <div class="trusted-logo">
+                <img alt="Company 4 logo" src="images/lg17.png" />
+              </div>
+              <div class="trusted-logo">
+                <img alt="Company 4 logo" src="images/lg18.png" />
+              </div>
+              <div class="trusted-logo">
+                <img alt="Company 4 logo" src="images/lg19.png" />
+              </div>
+              <div class="trusted-logo">
+                <img alt="Company 4 logo" src="images/lg20.png" />
+              </div>
+              <div class="trusted-logo">
+                <img alt="Company 4 logo" src="images/lg21.png" />
+              </div>
+              <div class="trusted-logo">
+                <img alt="Company 4 logo" src="images/lg22.png" />
+              </div>
+              <div class="trusted-logo">
+                <img alt="Company 4 logo" src="images/lg23.png" />
+              </div>
+              <div class="trusted-logo">
+                <img alt="Company 4 logo" src="images/lg24.png" />
+              </div>
+              <div class="trusted-logo">
+                <img alt="Company 4 logo" src="images/lg25.png" />
+              </div>
+              <div class="trusted-logo">
+                <img alt="Company 4 logo" src="images/lg26.png" />
+              </div>
+              <div class="trusted-logo">
+                <img alt="Company 4 logo" src="images/lg27.png" />
+              </div>
+              <div class="trusted-logo">
+                <img alt="Company 4 logo" src="images/lg28.png" />
+              </div>
+              <div class="trusted-logo">
+                <img alt="Company 4 logo" src="images/lg29.png" />
+              </div>
             </div>
           </div>
         </div>
@@ -725,7 +812,7 @@
             <span class="material-symbols-outlined">print</span>
           </div>
 
-          <h3 class="font-headline-md mb-sm">Digital Printing</h3>
+          <h3 class="font-headline-md mb-sm">Printing Services</h3>
 
           <p class="text-on-surface-variant mb-md">
             High-quality printing for marketing materials and custom products.
@@ -765,6 +852,7 @@
             <li>✓ Caps</li>
             <li>✓ Face Masks</li>
             <li>✓ Embroidery</li>
+            <li>✓ Bags etc.</li>
           </ul>
         </div>
 
@@ -2442,6 +2530,18 @@
             );
           }
         });
+      }
+
+      // Duplicate trusted logos so the marquee loops without a visible reset.
+      const trustedLogoTrack = document.querySelector(".trusted-logo-track");
+
+      if (trustedLogoTrack && !trustedLogoTrack.dataset.loopReady) {
+        Array.from(trustedLogoTrack.children).forEach((logo) => {
+          const clone = logo.cloneNode(true);
+          clone.setAttribute("aria-hidden", "true");
+          trustedLogoTrack.appendChild(clone);
+        });
+        trustedLogoTrack.dataset.loopReady = "true";
       }
 
       // Reveal individual content blocks on scroll
