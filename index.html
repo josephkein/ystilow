@@ -264,6 +264,16 @@
         font-size: 13px;
         line-height: 18px;
       }
+      .reviews-track {
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+      }
+      .reviews-track::-webkit-scrollbar {
+        display: none;
+      }
+      .review-card {
+        min-width: min(100%, 360px);
+      }
       #map {
         height: 320px;
         min-height: 320px;
@@ -399,6 +409,11 @@
             >Gallery</a
           >
           <a
+            class="font-body-md text-on-surface hover:text-primary transition-colors duration-300"
+            href="#reviews"
+            >Reviews</a
+          >
+          <a
             class="px-md py-sm bg-gradient-to-r from-primary to-primary-container text-white rounded-full font-label-md hover:shadow-lg transition-all transform hover:-translate-y-0.5"
             href="#contact"
             >Send an Inquiry</a
@@ -441,6 +456,11 @@
             class="py-sm font-body-md text-on-surface hover:text-primary transition-colors"
             href="#gallery"
             >Gallery</a
+          >
+          <a
+            class="py-sm font-body-md text-on-surface hover:text-primary transition-colors"
+            href="#reviews"
+            >Reviews</a
           >
           <a
             class="mt-sm px-md py-sm bg-gradient-to-r from-primary to-primary-container text-white rounded-xl font-label-md text-center"
@@ -663,13 +683,13 @@
                 <div class="brand-stat-card">
                   <h4
                     class="brand-stat-number text-secondary"
-                    data-target="200"
-                    data-suffix="+"
+                    data-target="100"
+                    data-suffix="%"
                   >
-                    0+
+                    0%
                   </h4>
                   <p class="brand-stat-label font-label-md">
-                    Happy Clients
+                    Client Satisfaction
                   </p>
                 </div>
               </div>
@@ -679,177 +699,193 @@
       </section>
       <!-- Services -->
       <section class="py-xl bg-surface-container" id="services">
+      <!-- Heading -->
+      <div class="max-w-container-max mx-auto px-lg text-center mb-xl">
+        <h2 class="font-headline-lg text-on-background">
+          Comprehensive Printing Solutions
+        </h2>
+        <p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto mt-sm">
+          From digital printing to personalized giveaways and corporate branding,
+          we provide complete printing solutions for businesses, organizations, and
+          personal projects.
+        </p>
+      </div>
+
+      <!-- Services -->
+      <div
+        class="max-w-container-max mx-auto px-lg grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg"
+      >
+        <!-- Card 1 -->
         <div
-          class="max-w-container-max mx-auto px-lg text-center space-y-md mb-lg"
+          class="group p-lg bg-white rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 border border-outline-variant hover:-translate-y-2"
         >
-          <h2 class="font-headline-lg text-on-background">
-            Comprehensive Printing Solutions
-          </h2>
-          <p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">
-            We offer a wide range of services tailored to meet your corporate
-            and personal needs.
+          <div
+            class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-md group-hover:bg-primary group-hover:text-white transition-all"
+          >
+            <span class="material-symbols-outlined">print</span>
+          </div>
+
+          <h3 class="font-headline-md mb-sm">Digital Printing</h3>
+
+          <p class="text-on-surface-variant mb-md">
+            High-quality printing for marketing materials and custom products.
           </p>
+
+          <ul class="space-y-2 text-sm">
+            <li>✓ DTF Printing</li>
+            <li>✓ UV Printing</li>
+            <li>✓ Sublimation Printing</li>
+            <li>✓ Tarpaulin Printing</li>
+            <li>✓ Sticker & Label Printing</li>
+            <li>✓ Calling Cards</li>
+          </ul>
         </div>
+
+        <!-- Card 2 -->
         <div
-          class="max-w-container-max mx-auto px-lg grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-md"
+          class="group p-lg bg-white rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 border border-outline-variant hover:-translate-y-2"
         >
-          <!-- Service 1 -->
           <div
-            class="group p-lg bg-white rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 border border-outline-variant hover:-translate-y-2"
+            class="w-14 h-14 bg-secondary/10 rounded-2xl flex items-center justify-center text-secondary mb-md group-hover:bg-secondary group-hover:text-white transition-all"
           >
-            <div
-              class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-md group-hover:bg-primary group-hover:text-white transition-all"
-            >
-              <span class="material-symbols-outlined">print</span>
-            </div>
-            <h3 class="font-headline-md mb-sm text-on-background">
-              Printing Services
-            </h3>
-            <p class="text-on-surface-variant mb-md">
-              High-fidelity DTF, UV, Sublimation, and offset printing for all
-              materials.
-            </p>
-            <ul class="space-y-base text-sm font-medium">
-              <li class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-primary text-[18px]"
-                  >check_circle</span
-                >
-                DTF Printing
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-primary text-[18px]"
-                  >check_circle</span
-                >
-                UV Printing
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-primary text-[18px]"
-                  >check_circle</span
-                >
-                Sublimation
-              </li>
-            </ul>
+            <span class="material-symbols-outlined">checkroom</span>
           </div>
-          <!-- Service 2 -->
-          <div
-            class="group p-lg bg-white rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 border border-outline-variant hover:-translate-y-2"
-          >
-            <div
-              class="w-14 h-14 bg-secondary/10 rounded-2xl flex items-center justify-center text-secondary mb-md group-hover:bg-secondary group-hover:text-white transition-all"
-            >
-              <span class="material-symbols-outlined">card_giftcard</span>
-            </div>
-            <h3 class="font-headline-md mb-sm text-on-background">
-              Corporate Giveaways
-            </h3>
-            <p class="text-on-surface-variant mb-md">
-              Premium branded items that keep your brand in your client's hands.
-            </p>
-            <ul class="space-y-base text-sm font-medium">
-              <li class="flex items-center gap-2">
-                <span
-                  class="material-symbols-outlined text-secondary text-[18px]"
-                  >check_circle</span
-                >
-                Vacuum Tumblers
-              </li>
-              <li class="flex items-center gap-2">
-                <span
-                  class="material-symbols-outlined text-secondary text-[18px]"
-                  >check_circle</span
-                >
-                Ceramic Mugs
-              </li>
-              <li class="flex items-center gap-2">
-                <span
-                  class="material-symbols-outlined text-secondary text-[18px]"
-                  >check_circle</span
-                >
-                Eco Bags
-              </li>
-            </ul>
-          </div>
-          <!-- Service 3 -->
-          <div
-            class="group p-lg bg-white rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 border border-outline-variant hover:-translate-y-2"
-          >
-            <div
-              class="w-14 h-14 bg-tertiary/10 rounded-2xl flex items-center justify-center text-tertiary mb-md group-hover:bg-tertiary group-hover:text-white transition-all"
-            >
-              <span class="material-symbols-outlined">checkroom</span>
-            </div>
-            <h3 class="font-headline-md mb-sm text-on-background">
-              Customized Apparel
-            </h3>
-            <p class="text-on-surface-variant mb-md">
-              Uniforms, shirts, and hoodies designed for comfort and
-              professional look.
-            </p>
-            <ul class="space-y-base text-sm font-medium">
-              <li class="flex items-center gap-2">
-                <span
-                  class="material-symbols-outlined text-tertiary text-[18px]"
-                  >check_circle</span
-                >
-                Corporate Shirts
-              </li>
-              <li class="flex items-center gap-2">
-                <span
-                  class="material-symbols-outlined text-tertiary text-[18px]"
-                  >check_circle</span
-                >
-                Event Hoodies
-              </li>
-              <li class="flex items-center gap-2">
-                <span
-                  class="material-symbols-outlined text-tertiary text-[18px]"
-                  >check_circle</span
-                >
-                Caps &amp; Outerwear
-              </li>
-            </ul>
-          </div>
-          <!-- Service 4 -->
-          <div
-            class="group p-lg bg-white rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 border border-outline-variant hover:-translate-y-2"
-          >
-            <div
-              class="w-14 h-14 bg-error/10 rounded-2xl flex items-center justify-center text-error mb-md group-hover:bg-error group-hover:text-white transition-all"
-            >
-              <span class="material-symbols-outlined"
-                >precision_manufacturing</span
-              >
-            </div>
-            <h3 class="font-headline-md mb-sm text-on-background">
-              Laser Engraving
-            </h3>
-            <p class="text-on-surface-variant mb-md">
-              Permanent and sophisticated branding on bamboo, wood, and metal
-              gifts.
-            </p>
-            <ul class="space-y-base text-sm font-medium">
-              <li class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-error text-[18px]"
-                  >check_circle</span
-                >
-                Bamboo Products
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-error text-[18px]"
-                  >check_circle</span
-                >
-                Metal Flasks
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-error text-[18px]"
-                  >check_circle</span
-                >
-                Wooden Keepsakes
-              </li>
-            </ul>
-          </div>
+
+          <h3 class="font-headline-md mb-sm">Customized Apparel</h3>
+
+          <p class="text-on-surface-variant mb-md">
+            Professional apparel printing and embroidery for every occasion.
+          </p>
+
+          <ul class="space-y-2 text-sm">
+            <li>✓ T-Shirts</li>
+            <li>✓ Polo Shirts</li>
+            <li>✓ Hoodies</li>
+            <li>✓ Jackets</li>
+            <li>✓ Caps</li>
+            <li>✓ Face Masks</li>
+            <li>✓ Embroidery</li>
+          </ul>
         </div>
-      </section>
+
+        <!-- Card 3 -->
+        <div
+          class="group p-lg bg-white rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 border border-outline-variant hover:-translate-y-2"
+        >
+          <div
+            class="w-14 h-14 bg-tertiary/10 rounded-2xl flex items-center justify-center text-tertiary mb-md group-hover:bg-tertiary group-hover:text-white transition-all"
+          >
+            <span class="material-symbols-outlined">card_giftcard</span>
+          </div>
+
+          <h3 class="font-headline-md mb-sm">Corporate Giveaways</h3>
+
+          <p class="text-on-surface-variant mb-md">
+            Customized promotional items that keep your brand visible.
+          </p>
+
+          <ul class="space-y-2 text-sm">
+            <li>✓ Eco Bags</li>
+            <li>✓ Canvas / Tote Bags</li>
+            <li>✓ Tumblers</li>
+            <li>✓ Ceramic Mugs</li>
+            <li>✓ Umbrellas</li>
+            <li>✓ Lanyards</li>
+          </ul>
+        </div>
+
+        <!-- Card 4 -->
+        <div
+          class="group p-lg bg-white rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 border border-outline-variant hover:-translate-y-2"
+        >
+          <div
+            class="w-14 h-14 bg-error/10 rounded-2xl flex items-center justify-center text-error mb-md group-hover:bg-error group-hover:text-white transition-all"
+          >
+            <span class="material-symbols-outlined">inventory_2</span>
+          </div>
+
+          <h3 class="font-headline-md mb-sm">Office & Promotional Items</h3>
+
+          <p class="text-on-surface-variant mb-md">
+            Everyday promotional products customized with your brand.
+          </p>
+
+          <ul class="space-y-2 text-sm">
+            <li>✓ Ballpens</li>
+            <li>✓ Notebooks</li>
+            <li>✓ Mouse Pads</li>
+            <li>✓ Ref Magnets</li>
+            <li>✓ Stickers</li>
+          </ul>
+        </div>
+
+        <!-- Card 5 -->
+        <div
+          class="group p-lg bg-white rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 border border-outline-variant hover:-translate-y-2"
+        >
+          <div
+            class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center text-green-600 mb-md group-hover:bg-green-600 group-hover:text-white transition-all"
+          >
+            <span class="material-symbols-outlined">precision_manufacturing</span>
+          </div>
+
+          <h3 class="font-headline-md mb-sm">Laser Engraving</h3>
+
+          <p class="text-on-surface-variant mb-md">
+            Elegant and permanent engraving on various materials.
+          </p>
+
+          <ul class="space-y-2 text-sm">
+            <li>✓ Bamboo Products</li>
+            <li>✓ Wooden Gifts</li>
+            <li>✓ Metal Items</li>
+            <li>✓ Personalized Souvenirs</li>
+          </ul>
+        </div>
+
+        <!-- Card 6 -->
+        <div
+          class="group p-lg bg-white rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 border border-outline-variant hover:-translate-y-2"
+        >
+          <div
+            class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center text-orange-600 mb-md group-hover:bg-orange-600 group-hover:text-white transition-all"
+          >
+            <span class="material-symbols-outlined">auto_awesome</span>
+          </div>
+
+          <h3 class="font-headline-md mb-sm">Specialty Printing</h3>
+
+          <p class="text-on-surface-variant mb-md">
+            Personalized products for events, businesses, and special occasions.
+          </p>
+
+          <ul class="space-y-2 text-sm">
+            <li>✓ Acrylic Spray</li>
+            <li>✓ Pouches</li>
+            <li>✓ Foldable Fans</li>
+            <li>✓ Bamboo Fans</li>
+            <li>✓ Custom Orders</li>
+            <li>✓ And Many More...</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom CTA -->
+      <div class="text-center mt-xl">
+        <p class="text-on-surface-variant mb-md">
+          Don't see what you're looking for? We also accept custom printing requests
+          for businesses, schools, events, and organizations.
+        </p>
+
+        <a
+          href="#contact"
+          class="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full font-semibold hover:scale-105 transition"
+        >
+          Request a Custom Print
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+      </div>
+    </section>
       <!-- Featured Products -->
       <section class="py-xl" id="products">
         <div
@@ -902,7 +938,7 @@
               <div
                 class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700"
                 style="
-                  background-image: url(&quot;images/mug.jpg&quot;);
+                  background-image: url(&quot;images/best4.jpg&quot;);
                 "
               ></div>
             </div>
@@ -956,7 +992,7 @@
               <div
                 class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700"
                 style="
-                  background-image: url(&quot;images/echo.jpg&quot;);
+                  background-image: url(&quot;images/best3.jpg&quot;);
                 "
               ></div>
             </div>
@@ -983,7 +1019,7 @@
               <div
                 class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700"
                 style="
-                  background-image: url(&quot;images/ballpens.jpg&quot;);
+                  background-image: url(&quot;images/best1.jpg&quot;);
                 "
               ></div>
             </div>
@@ -1010,7 +1046,7 @@
               <div
                 class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700"
                 style="
-                  background-image: url(&quot;images/notebooks.jpg&quot;);
+                  background-image: url(&quot;images/best2.jpg&quot;);
                 "
               ></div>
             </div>
@@ -1240,139 +1276,145 @@
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
             <!-- Bundle Card -->
             <div
-              class="glass p-lg rounded-3xl space-y-md hover:scale-[1.02] transition-transform duration-500 border border-white/40"
+              class="glass rounded-3xl overflow-hidden hover:scale-[1.02] transition-transform duration-500 border border-white/40"
             >
               <img
                 alt="Bundle set sample"
-                class="w-full aspect-[4/3] object-cover rounded-2xl"
+                class="w-full aspect-[4/3] object-cover"
                 src="images/set4.png"
               />
-              <div class="flex justify-between items-start">
-                <h3 class="font-headline-md text-primary">Bundle Set</h3>
+              <div class="p-lg space-y-md">
+                <div class="flex justify-between items-start">
+                  <h3 class="font-headline-md text-primary">Bundle Set</h3>
+                </div>
+                <p class="text-on-surface-variant">
+                  Bulk-ready bundle sets for events, teams, and campaigns.
+                </p>
+                <ul class="space-y-sm">
+                  <li class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-primary"
+                      >check</span
+                    >
+                    A5 Maleskin notebook
+                  </li>
+                  <li class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-primary"
+                      >check</span
+                    >
+                    Ceramic Mug - Multicolor wrap around
+                  </li>
+                  <li class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-primary"
+                      >check</span
+                    >
+                    Point pen multicolor, UV print
+                  </li>
+                  <li class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-primary"
+                      >check</span
+                    >
+                    Quantity: 250-499 pcs
+                  </li>
+                </ul>
+                <a
+                  class="block w-full py-4 bg-primary text-white font-label-md rounded-xl shadow-lg hover:shadow-primary/30 text-center"
+                  href="#contact"
+                >
+                  Inquire Set
+                </a>
               </div>
-              <p class="text-on-surface-variant">
-                Bulk-ready bundle sets for events, teams, and campaigns.
-              </p>
-              <ul class="space-y-sm">
-                <li class="flex items-center gap-3">
-                  <span class="material-symbols-outlined text-primary"
-                    >check</span
-                  >
-                  A5 Maleskin notebook
-                </li>
-                <li class="flex items-center gap-3">
-                  <span class="material-symbols-outlined text-primary"
-                    >check</span
-                  >
-                  Ceramic Mug - Multicolor wrap around
-                </li>
-                <li class="flex items-center gap-3">
-                  <span class="material-symbols-outlined text-primary"
-                    >check</span
-                  >
-                  Point pen multicolor, UV print
-                </li>
-                <li class="flex items-center gap-3">
-                  <span class="material-symbols-outlined text-primary"
-                    >check</span
-                  >
-                  Quantity: 250-499 pcs
-                </li>
-              </ul>
-              <a
-                class="block w-full py-4 bg-primary text-white font-label-md rounded-xl shadow-lg hover:shadow-primary/30 text-center"
-                href="#contact"
-              >
-                Inquire Set
-              </a>
             </div>
             <div
-              class="glass p-lg rounded-3xl space-y-md hover:scale-[1.02] transition-transform duration-500 border border-white/40"
+              class="glass rounded-3xl overflow-hidden hover:scale-[1.02] transition-transform duration-500 border border-white/40"
             >
               <img
                 alt="Corporate gifts and giveaways sample"
-                class="w-full aspect-[4/3] object-cover rounded-2xl"
+                class="w-full aspect-[4/3] object-cover"
                 src="images/corporateset.png"
               />
-              <h3 class="font-headline-md text-secondary">
-                Corporate Gifts and Giveaways
-              </h3>
-              <p class="text-on-surface-variant">
-                Practical branded items for clients, staff, and events.
-              </p>
-              <ul class="space-y-sm">
-                <li class="flex items-center gap-3">
-                  <span class="material-symbols-outlined text-secondary"
-                    >check</span
-                  >
-                  Notebook with sign pen
-                </li>
-                <li class="flex items-center gap-3">
-                  <span class="material-symbols-outlined text-secondary"
-                    >check</span
-                  >
-                  Metalic ball point pen
-                </li>
-                <li class="flex items-center gap-3">
-                  <span class="material-symbols-outlined text-secondary"
-                    >check</span
-                  >
-                  Engraved/UV DTF print
-                </li>
-                <li class="flex items-center gap-3">
-                  <span class="material-symbols-outlined text-secondary"
-                    >check</span
-                  >
-                  Quantity: minimum 50 pcs
-                </li>
-              </ul>
-              <a
-                class="block w-full py-4 bg-secondary text-white font-label-md rounded-xl shadow-lg hover:shadow-secondary/30 text-center"
-                href="#contact"
-              >
-                Inquire Gifts
-              </a>
+              <div class="p-lg space-y-md">
+                <h3 class="font-headline-md text-secondary">
+                  Corporate Gifts and Giveaways
+                </h3>
+                <p class="text-on-surface-variant">
+                  Practical branded items for clients, staff, and events.
+                </p>
+                <ul class="space-y-sm">
+                  <li class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-secondary"
+                      >check</span
+                    >
+                    Notebook with sign pen
+                  </li>
+                  <li class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-secondary"
+                      >check</span
+                    >
+                    Metalic ball point pen
+                  </li>
+                  <li class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-secondary"
+                      >check</span
+                    >
+                    Engraved/UV DTF print
+                  </li>
+                  <li class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-secondary"
+                      >check</span
+                    >
+                    Quantity: minimum 50 pcs
+                  </li>
+                </ul>
+                <a
+                  class="block w-full py-4 bg-secondary text-white font-label-md rounded-xl shadow-lg hover:shadow-secondary/30 text-center"
+                  href="#contact"
+                >
+                  Inquire Gifts
+                </a>
+              </div>
             </div>
             <div
-              class="glass p-lg rounded-3xl space-y-md hover:scale-[1.02] transition-transform duration-500 border border-white/40"
+              class="glass rounded-3xl overflow-hidden hover:scale-[1.02] transition-transform duration-500 border border-white/40"
             >
               <img
                 alt="Engraved items sample"
-                class="w-full aspect-[4/3] object-cover rounded-2xl"
+                class="w-full aspect-[4/3] object-cover"
                 src="images/engravedset.png"
               />
-              <h3 class="font-headline-md text-tertiary">
-                Engraved Items
-              </h3>
-              <p class="text-on-surface-variant">
-                Personalized engraved pieces for memorable brand details.
-              </p>
-              <ul class="space-y-sm">
-                <li class="flex items-center gap-3">
-                  <span class="material-symbols-outlined text-tertiary"
-                    >check</span
-                  >
-                  Engraved notebook with pen
-                </li>
-                <li class="flex items-center gap-3">
-                  <span class="material-symbols-outlined text-tertiary"
-                    >check</span
-                  >
-                  Engraved logo/name
-                </li>
-                <li class="flex items-center gap-3">
-                  <span class="material-symbols-outlined text-tertiary"
-                    >check</span
-                  >
-                  Quantity: minimum 50 pcs
-                </li>
-              </ul>
-              <a
-                class="block w-full py-4 bg-tertiary text-white font-label-md rounded-xl shadow-lg hover:shadow-tertiary/30 text-center"
-                href="#contact"
-              >
-                Inquire Engraving
-              </a>
+              <div class="p-lg space-y-md">
+                <h3 class="font-headline-md text-tertiary">
+                  Engraved Items
+                </h3>
+                <p class="text-on-surface-variant">
+                  Personalized engraved pieces for memorable brand details.
+                </p>
+                <ul class="space-y-sm">
+                  <li class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-tertiary"
+                      >check</span
+                    >
+                    Engraved notebook with pen
+                  </li>
+                  <li class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-tertiary"
+                      >check</span
+                    >
+                    Engraved logo/name
+                  </li>
+                  <li class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-tertiary"
+                      >check</span
+                    >
+                    Quantity: minimum 50 pcs
+                  </li>
+                </ul>
+                <a
+                  class="block w-full py-4 bg-tertiary text-white font-label-md rounded-xl shadow-lg hover:shadow-tertiary/30 text-center"
+                  href="#contact"
+                >
+                  Inquire Engraving
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -1684,28 +1726,220 @@
           </div>
         </div>
       </section>
+      <!-- Reviews Section -->
+      <section class="py-xl bg-white" id="reviews">
+        <div class="max-w-container-max mx-auto px-lg space-y-lg">
+          <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-md">
+            <div class="space-y-xs max-w-2xl">
+              <p class="font-label-md text-primary">Client Reviews</p>
+              <h2 class="font-headline-lg text-on-background">
+                What Customers Say About Ystilow
+              </h2>
+              <p class="font-body-lg text-on-surface-variant">
+                Feedback from teams and small businesses who trust us for
+                custom prints, giveaways, and rush branding needs.
+              </p>
+            </div>
+            <div class="flex items-center gap-sm">
+              <button
+                aria-label="Show previous review"
+                class="w-12 h-12 rounded-full border border-outline-variant text-primary bg-white shadow-sm flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                id="reviewsPrev"
+                type="button"
+              >
+                <span class="material-symbols-outlined">arrow_back</span>
+              </button>
+              <button
+                aria-label="Show next review"
+                class="w-12 h-12 rounded-full border border-outline-variant text-primary bg-white shadow-sm flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                id="reviewsNext"
+                type="button"
+              >
+                <span class="material-symbols-outlined">arrow_forward</span>
+              </button>
+            </div>
+          </div>
+          <div
+            aria-label="Customer reviews carousel"
+            class="reviews-track flex gap-md overflow-x-auto snap-x snap-mandatory pb-sm"
+            id="reviewsTrack"
+          >
+            <article
+              class="review-card snap-start glass rounded-2xl p-lg border border-outline-variant shadow-sm flex flex-col gap-md"
+            >
+              <div class="flex items-center justify-between gap-md">
+                <div>
+                  <h3 class="font-bold text-on-background">Allyzza Joie Tolosa</h3>
+                  <p class="text-sm text-on-surface-variant">Manager, Laguna</p>
+                </div>
+                <div class="flex text-secondary" aria-label="5 out of 5 stars">
+                  <span class="material-symbols-outlined text-[20px]">star</span>
+                  <span class="material-symbols-outlined text-[20px]">star</span>
+                  <span class="material-symbols-outlined text-[20px]">star</span>
+                  <span class="material-symbols-outlined text-[20px]">star</span>
+                  <span class="material-symbols-outlined text-[20px]">star</span>
+                </div>
+              </div>
+              <p class="text-on-surface-variant">
+                "Super satisfied with my customized notebook order! 🫶 Makapal yung pages, smooth yung paper, and ang ganda ng print. Even my boss liked it so much! 😍 Highly recommended! 💯✨"
+              </p>
+            </article>
+            <article
+              class="review-card snap-start glass rounded-2xl p-lg border border-outline-variant shadow-sm flex flex-col gap-md"
+            >
+              <div class="flex items-center justify-between gap-md">
+                <div>
+                  <h3 class="font-bold text-on-background">Gellie Movilla Mayo</h3>
+                  <p class="text-sm text-on-surface-variant">Worker, Pasig</p>
+                </div>
+                <div class="flex text-secondary" aria-label="5 out of 5 stars">
+                  <span class="material-symbols-outlined text-[20px]">star</span>
+                  <span class="material-symbols-outlined text-[20px]">star</span>
+                  <span class="material-symbols-outlined text-[20px]">star</span>
+                  <span class="material-symbols-outlined text-[20px]">star</span>
+                  <span class="material-symbols-outlined text-[20px]">star</span>
+                </div>
+              </div>
+              <p class="text-on-surface-variant">
+                "Very Satisfied with the personalized umbrella. It looks great and the quality exceeded my expectations. Highly recommended!"
+              </p>
+            </article>
+            <article
+              class="review-card snap-start glass rounded-2xl p-lg border border-outline-variant shadow-sm flex flex-col gap-md"
+            >
+              <div class="flex items-center justify-between gap-md">
+                <div>
+                  <h3 class="font-bold text-on-background">Asia Pacific Group</h3>
+                  <p class="text-sm text-on-surface-variant">Educational Consultant, Makati</p>
+                </div>
+                <div class="flex text-secondary" aria-label="5 out of 5 stars">
+                  <span class="material-symbols-outlined text-[20px]">star</span>
+                  <span class="material-symbols-outlined text-[20px]">star</span>
+                  <span class="material-symbols-outlined text-[20px]">star</span>
+                  <span class="material-symbols-outlined text-[20px]">star</span>
+                  <span class="material-symbols-outlined text-[20px]">star</span>
+                </div>
+              </div>
+              <p class="text-on-surface-variant">
+                "Gratitude to Ystilow Printing Services! 🙏 Quick response and
+                incredible support for our last-minute Education Expo
+                merchandise order. Top-notch quality and service! 🙌✨"
+              </p>
+            </article>
+            <article
+              class="review-card snap-start glass rounded-2xl p-lg border border-outline-variant shadow-sm flex flex-col gap-md"
+            >
+              <div class="flex items-center justify-between gap-md">
+                <div>
+                  <h3 class="font-bold text-on-background">Arvin Dela Cruz</h3>
+                  <p class="text-sm text-on-surface-variant">HR Admin, BGC</p>
+                </div>
+                <div class="flex text-secondary" aria-label="5 out of 5 stars">
+                  <span class="material-symbols-outlined text-[20px]">star</span>
+                  <span class="material-symbols-outlined text-[20px]">star</span>
+                  <span class="material-symbols-outlined text-[20px]">star</span>
+                  <span class="material-symbols-outlined text-[20px]">star</span>
+                  <span class="material-symbols-outlined text-[20px]">star</span>
+                </div>
+              </div>
+              <p class="text-on-surface-variant">
+                "Nag-order kami ng company shirts and tumblers for onboarding.
+                Quality is consistent, maayos ang packaging, and delivered on
+                time before our event."
+              </p>
+            </article>
+            <article
+              class="review-card snap-start glass rounded-2xl p-lg border border-outline-variant shadow-sm flex flex-col gap-md"
+            >
+              <div class="flex items-center justify-between gap-md">
+                <div>
+                  <h3 class="font-bold text-on-background">Janelle Uy</h3>
+                  <p class="text-sm text-on-surface-variant">Events Supplier, QC</p>
+                </div>
+                <div class="flex text-secondary" aria-label="5 out of 5 stars">
+                  <span class="material-symbols-outlined text-[20px]">star</span>
+                  <span class="material-symbols-outlined text-[20px]">star</span>
+                  <span class="material-symbols-outlined text-[20px]">star</span>
+                  <span class="material-symbols-outlined text-[20px]">star</span>
+                  <span class="material-symbols-outlined text-[20px]">star</span>
+                </div>
+              </div>
+              <p class="text-on-surface-variant">
+                "Very reliable sila for rush giveaways. Hindi mukhang minadali
+                yung UV print sa acrylic keychains, and they sent photos before
+                pickup para sure kami sa output."
+              </p>
+            </article>
+            <article
+              class="review-card snap-start glass rounded-2xl p-lg border border-outline-variant shadow-sm flex flex-col gap-md"
+            >
+              <div class="flex items-center justify-between gap-md">
+                <div>
+                  <h3 class="font-bold text-on-background">Paolo Mendoza</h3>
+                  <p class="text-sm text-on-surface-variant">Startup Founder, Makati</p>
+                </div>
+                <div class="flex text-secondary" aria-label="5 out of 5 stars">
+                  <span class="material-symbols-outlined text-[20px]">star</span>
+                  <span class="material-symbols-outlined text-[20px]">star</span>
+                  <span class="material-symbols-outlined text-[20px]">star</span>
+                  <span class="material-symbols-outlined text-[20px]">star</span>
+                  <span class="material-symbols-outlined text-[20px]">star</span>
+                </div>
+              </div>
+              <p class="text-on-surface-variant">
+                "Our team needed a small batch of branded notebooks and pens.
+                Ystilow helped us adjust the artwork, tapos premium tingnan yung
+                final set kahit hindi sobrang laki ng order."
+              </p>
+            </article>
+            <article
+              class="review-card snap-start glass rounded-2xl p-lg border border-outline-variant shadow-sm flex flex-col gap-md"
+            >
+              <div class="flex items-center justify-between gap-md">
+                <div>
+                  <h3 class="font-bold text-on-background">Rhea Villanueva</h3>
+                  <p class="text-sm text-on-surface-variant">Online Seller, Taguig</p>
+                </div>
+                <div class="flex text-secondary" aria-label="5 out of 5 stars">
+                  <span class="material-symbols-outlined text-[20px]">star</span>
+                  <span class="material-symbols-outlined text-[20px]">star</span>
+                  <span class="material-symbols-outlined text-[20px]">star</span>
+                  <span class="material-symbols-outlined text-[20px]">star</span>
+                  <span class="material-symbols-outlined text-[20px]">star</span>
+                </div>
+              </div>
+              <p class="text-on-surface-variant">
+                "Ang helpful nila sa choosing materials for labels and thank-you
+                cards. Crisp yung print, hindi dull ang colors, and easy kausap
+                from quotation hanggang delivery."
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
       <!-- FAQ Section -->
       <section class="py-xl bg-surface-container-low">
-        <div class="max-w-3xl mx-auto px-lg">
+        <div class="max-w-container-max mx-auto px-lg">
           <div class="text-center mb-xl">
             <h2 class="font-headline-lg">Frequently Asked Questions</h2>
           </div>
-          <div class="space-y-md">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-md">
             <div class="glass rounded-2xl p-md border border-outline-variant">
               <details class="group">
                 <summary
                   class="flex justify-between items-center cursor-pointer list-none font-headline-md text-body-md font-bold text-on-background"
                 >
-                  What is the minimum order quantity?
+                  1. What types of corporate giveaways do you print?
                   <span
                     class="material-symbols-outlined transition-transform group-open:rotate-180"
                     >expand_more</span
                   >
                 </summary>
                 <p class="mt-md text-on-surface-variant">
-                  MOQ varies by product. For shirts, it's typically 12 pcs,
-                  while for small items like ballpens, it's 50-100 pcs. Contact
-                  us for specific item MOQs.
+                  We offer a wide range of customized corporate giveaways such
+                  as mugs, tumblers, pens, notebooks, keychains, tote bags,
+                  plaques, stickers, packaging items, and other promotional
+                  products.
                 </p>
               </details>
             </div>
@@ -1714,16 +1948,16 @@
                 <summary
                   class="flex justify-between items-center cursor-pointer list-none font-headline-md text-body-md font-bold text-on-background"
                 >
-                  Do you provide digital mockups?
+                  2. Can you customize giveaways with our company logo and branding?
                   <span
                     class="material-symbols-outlined transition-transform group-open:rotate-180"
                     >expand_more</span
                   >
                 </summary>
                 <p class="mt-md text-on-surface-variant">
-                  Yes! Once an order is confirmed, our design team provides
-                  digital mockups for your approval before proceeding to full
-                  production.
+                  Yes! We can customize your items with your company logo, brand
+                  colors, designs, and personalized details to match your
+                  corporate identity.
                 </p>
               </details>
             </div>
@@ -1732,16 +1966,16 @@
                 <summary
                   class="flex justify-between items-center cursor-pointer list-none font-headline-md text-body-md font-bold text-on-background"
                 >
-                  How long is the production lead time?
+                  3. What printing method do you use?
                   <span
                     class="material-symbols-outlined transition-transform group-open:rotate-180"
                     >expand_more</span
                   >
                 </summary>
                 <p class="mt-md text-on-surface-variant">
-                  Standard production takes 7-10 business days. Rush orders (3-5
-                  days) are available for an additional fee depending on the
-                  item.
+                  We offer high-quality printing solutions, including Direct UV
+                  Printing and other suitable printing methods depending on the
+                  product material and design requirements.
                 </p>
               </details>
             </div>
@@ -1750,16 +1984,121 @@
                 <summary
                   class="flex justify-between items-center cursor-pointer list-none font-headline-md text-body-md font-bold text-on-background"
                 >
-                  What file formats do you accept for designs?
+                  4. Do you accept bulk orders?
                   <span
                     class="material-symbols-outlined transition-transform group-open:rotate-180"
                     >expand_more</span
                   >
                 </summary>
                 <p class="mt-md text-on-surface-variant">
-                  We prefer high-resolution vector files (AI, EPS, SVG) or
-                  high-quality PNG/PDF files (at least 300 DPI) for the best
-                  print results.
+                  Yes, we specialize in bulk corporate orders and can provide
+                  special discounts for large quantities.
+                </p>
+              </details>
+            </div>
+            <div class="glass rounded-2xl p-md border border-outline-variant">
+              <details class="group">
+                <summary
+                  class="flex justify-between items-center cursor-pointer list-none font-headline-md text-body-md font-bold text-on-background"
+                >
+                  5. What is the minimum order quantity (MOQ)?
+                  <span
+                    class="material-symbols-outlined transition-transform group-open:rotate-180"
+                    >expand_more</span
+                  >
+                </summary>
+                <p class="mt-md text-on-surface-variant">
+                  Minimum order requirements vary depending on the product.
+                  Contact us with your preferred item and quantity so we can
+                  provide the best option for you.
+                </p>
+              </details>
+            </div>
+            <div class="glass rounded-2xl p-md border border-outline-variant">
+              <details class="group">
+                <summary
+                  class="flex justify-between items-center cursor-pointer list-none font-headline-md text-body-md font-bold text-on-background"
+                >
+                  6. How long is the production time?
+                  <span
+                    class="material-symbols-outlined transition-transform group-open:rotate-180"
+                    >expand_more</span
+                  >
+                </summary>
+                <p class="mt-md text-on-surface-variant">
+                  Production time depends on the product type, quantity, and
+                  design approval. We will provide an estimated timeline once
+                  your order details are confirmed.
+                </p>
+              </details>
+            </div>
+            <div class="glass rounded-2xl p-md border border-outline-variant">
+              <details class="group">
+                <summary
+                  class="flex justify-between items-center cursor-pointer list-none font-headline-md text-body-md font-bold text-on-background"
+                >
+                  7. Can you help us choose the best giveaway item for our event?
+                  <span
+                    class="material-symbols-outlined transition-transform group-open:rotate-180"
+                    >expand_more</span
+                  >
+                </summary>
+                <p class="mt-md text-on-surface-variant">
+                  Absolutely! We can recommend products based on your budget,
+                  event type, target audience, and branding needs.
+                </p>
+              </details>
+            </div>
+            <div class="glass rounded-2xl p-md border border-outline-variant">
+              <details class="group">
+                <summary
+                  class="flex justify-between items-center cursor-pointer list-none font-headline-md text-body-md font-bold text-on-background"
+                >
+                  8. Do you provide design assistance?
+                  <span
+                    class="material-symbols-outlined transition-transform group-open:rotate-180"
+                    >expand_more</span
+                  >
+                </summary>
+                <p class="mt-md text-on-surface-variant">
+                  Yes, we can assist with layouts and design suggestions to make
+                  sure your logo and artwork look professional on the chosen
+                  product.
+                </p>
+              </details>
+            </div>
+            <div class="glass rounded-2xl p-md border border-outline-variant">
+              <details class="group">
+                <summary
+                  class="flex justify-between items-center cursor-pointer list-none font-headline-md text-body-md font-bold text-on-background"
+                >
+                  9. Can we request samples before placing a bulk order?
+                  <span
+                    class="material-symbols-outlined transition-transform group-open:rotate-180"
+                    >expand_more</span
+                  >
+                </summary>
+                <p class="mt-md text-on-surface-variant">
+                  Sample availability depends on the product. Feel free to ask
+                  us about sample options.
+                </p>
+              </details>
+            </div>
+            <div class="glass rounded-2xl p-md border border-outline-variant">
+              <details class="group">
+                <summary
+                  class="flex justify-between items-center cursor-pointer list-none font-headline-md text-body-md font-bold text-on-background"
+                >
+                  10. How can we place an order?
+                  <span
+                    class="material-symbols-outlined transition-transform group-open:rotate-180"
+                    >expand_more</span
+                  >
+                </summary>
+                <p class="mt-md text-on-surface-variant">
+                  Simply send us your preferred product, quantity,
+                  size/specifications, and design/logo. Our team will assist you
+                  with pricing and order processing.
                 </p>
               </details>
             </div>
@@ -1853,18 +2192,18 @@
               "
             ></div>
             <h2 class="font-display text-headline-lg text-white relative z-10">
-              Ready to Bring Your Ideas to Life?
+              Your Brand Deserves More Than Just a Giveaway
             </h2>
             <p
               class="font-body-lg text-white/80 max-w-2xl mx-auto relative z-10"
             >
-              Partner with Ystilow Printing Services and experience the perfect
-              blend of precision, quality, and creative excellence.
+              It deserves to be remembered. Quality prints, memorable
+              giveaways, and lasting impressions for every campaign.
             </p>
             <div class="pt-md relative z-10">
               <a
                 class="inline-flex px-lg py-4 bg-white text-primary font-label-md rounded-xl hover:bg-opacity-90 transition-all hover:scale-105"
-                href="#contact"
+                href="https://www.facebook.com/profile.php?id=100084542806723&sk=photos"
                 >Start Your Project Now</a
               >
             </div>
@@ -2173,6 +2512,44 @@
           viewAllProductsButton.innerHTML = !isExpanded
             ? 'Show featured products <span class="material-symbols-outlined text-[20px]">expand_less</span>'
             : 'View all products <span class="material-symbols-outlined text-[20px]">expand_more</span>';
+        });
+      }
+
+      // Customer reviews carousel
+      const reviewsTrack = document.querySelector("#reviewsTrack");
+      const reviewsPrev = document.querySelector("#reviewsPrev");
+      const reviewsNext = document.querySelector("#reviewsNext");
+
+      if (reviewsTrack && reviewsPrev && reviewsNext) {
+        const getReviewScrollAmount = () => {
+          const firstCard = reviewsTrack.querySelector(".review-card");
+          if (!firstCard) {
+            return reviewsTrack.clientWidth;
+          }
+
+          const cardStyles = window.getComputedStyle(firstCard);
+          const trackStyles = window.getComputedStyle(reviewsTrack);
+          const cardWidth =
+            firstCard.getBoundingClientRect().width +
+            parseFloat(cardStyles.marginLeft) +
+            parseFloat(cardStyles.marginRight);
+          const gap = parseFloat(trackStyles.columnGap || trackStyles.gap || 0);
+
+          return cardWidth + gap;
+        };
+
+        reviewsPrev.addEventListener("click", () => {
+          reviewsTrack.scrollBy({
+            left: -getReviewScrollAmount(),
+            behavior: "smooth",
+          });
+        });
+
+        reviewsNext.addEventListener("click", () => {
+          reviewsTrack.scrollBy({
+            left: getReviewScrollAmount(),
+            behavior: "smooth",
+          });
         });
       }
     </script>
